@@ -1,0 +1,9 @@
+#!/bin/sh
+
+exec java -cp "$HOME/.m2/repository/zeta/zeta-starter-51/3.0.0/workstation-standalone.jar:$HOME/.zeta" \
+     -Dzeta.module=workstation \
+     -Dzeta.cfg.ns=com.enniu.workstation.config \
+     -Dzeta.cfg.profile=local \
+     -Dzeta.logging.level.com.zaxxer=off \
+     -Dservice.tag=k8sdev \
+     zeta.enniu.main "$@"
